@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "#Zawartosc katalogu `pwd`"
+numer=0
+
+ls -l | while read line
+do
+
+    if [ $numer != 0 ]
+	then
+	echo "$numer. $line"
+	fi
+    ((numer++))
+done
