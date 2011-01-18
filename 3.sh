@@ -1,16 +1,8 @@
 #!/bin/bash
 
-echo "#Zawartosc katalogu `pwd`"
-cos=0
-
-ls -l | while read line
+for a in *
 do
-
-    if [ $cos != 0 ]
-	then
-	echo "$cos. $line"
-	fi
-    ((numer++))
+    echo "$a:"
+    echo "`cat $a`"
+    echo "-----------"
 done
-
-grep 'zad.*'
